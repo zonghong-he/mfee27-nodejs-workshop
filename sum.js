@@ -37,6 +37,7 @@ Array.prototype.doFind = function (callback) {
     }
 
 };
+
 Array.prototype.doMap = function (callback) {
     if (typeof (callback) != "function") {
         return "is not function";
@@ -48,6 +49,7 @@ Array.prototype.doMap = function (callback) {
     }
     return result;
 }
+
 Array.prototype.doReduce = function (callback, initVal = 0) {
     let result = initVal;
     for (let item of this) {
@@ -56,6 +58,7 @@ Array.prototype.doReduce = function (callback, initVal = 0) {
     }
     // return result
 }
+
 Array.prototype.doConcat=function(arr2){
     let result=this;
     for(let item of arr2){
