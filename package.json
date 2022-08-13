@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "name": "nodejs-workshop",
+  "description": "今天是nodeJS2的第一堂課程，主要幫我們複習git的部分，經過老師這次的講解才知道之前對git的應用有多麼的暴力，重新導正我們運用git對分支管理部分的觀念，也分享了業界實際應用git的流程。  \r 經過老師分享業界實際應用的情況才了解我們所學的技術是為了解決甚麼樣的問題而出現的，之前都只是單純的學習怎麼操作卻不了解為甚麼，聽老師分享了解原因後才更清楚自己在做什麼，因此更能融會貫通的應用我們所學的技術，希望老師可以多多分享業界實際的情況，讓我們更了解所學的技術實際應用的情況。",
+  "version": "1.0.0",
+  "main": "sum.js",
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon callback1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zonghong-he/mfee27-nodejs-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zonghong-he/mfee27-nodejs-workshop/issues"
+  },
+  "homepage": "https://github.com/zonghong-he/mfee27-nodejs-workshop#readme"
+}

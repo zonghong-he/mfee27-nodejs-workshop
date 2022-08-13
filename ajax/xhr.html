@@ -12,59 +12,58 @@
 
     <script>
       // test url: http://54.71.133.152:3000/
-      let date = new Date()
+      let date = new Date();
 
-      var responseDom = document.getElementById('response')
-      var syncBtn = document.getElementById('syncBtn')
+      var responseDom = document.getElementById('response');
+      var syncBtn = document.getElementById('syncBtn');
       syncBtn.addEventListener('click', function () {
-        responseDom.innerText = '開始同步請求'
+        responseDom.innerText = '開始同步請求';
         // TODO: 實作同步請求
-        var xhr = new XMLHttpRequest()
+        var xhr = new XMLHttpRequest();
         xhr.addEventListener('load', function () {
           if (xhr.status === 200) {
-            responseDom.innerHTML = `同步請求已回復${xhr.responseText}`
+            responseDom.innerHTML = `同步請求已回復${xhr.responseText}`;
           } else {
-            responseDom.innerHTML = `同步請求失敗，狀態碼${xhr.status}`
+            responseDom.innerHTML = `同步請求失敗，狀態碼${xhr.status}`;
           }
-        })
-        xhr.onerror = (event) => (responseDom.innerHTML = `XHR同步請求錯誤`)
+        });
+        xhr.onerror = (event) => (responseDom.innerHTML = `XHR同步請求錯誤`);
 
-        xhr.open('GET', 'http://54.71.133.152:3000', false)
-        xhr.send()
-      })
+        xhr.open('GET', 'http://54.71.133.152:3000', false);
+        xhr.send();
+      });
 
-      var asyncBtn = document.getElementById('asyncBtn')
+      var asyncBtn = document.getElementById('asyncBtn');
       asyncBtn.addEventListener('click', async function () {
-        responseDom.innerText = '開始「非」同步請求'
+        responseDom.innerText = '開始「非」同步請求';
 
         // TODO: 實作非同步請求
         await (() => {
           return new Promise((resolv, reject) => {
-            var xhr = new XMLHttpRequest()
+            var xhr = new XMLHttpRequest();
             xhr.addEventListener('load', function () {
               if (xhr.status === 200) {
-                responseDom.innerHTML = `非同步請求已回復${xhr.responseText}`
-                resolv()
+                responseDom.innerHTML = `非同步請求已回復${xhr.responseText}`;
+                resolv();
               } else {
-                responseDom.innerHTML = `非同步請求失敗，狀態碼${xhr.status}`
-                reject()
+                responseDom.innerHTML = `非同步請求失敗，狀態碼${xhr.status}`;
+                reject();
               }
-            })
-            xhr.onerror = (event) =>
-              (responseDom.innerHTML = `XHR非同步請求錯誤`)
+            });
+            xhr.onerror = (event) => (responseDom.innerHTML = `XHR非同步請求錯誤`);
 
-            xhr.open('GET', 'http://54.71.133.152:3000', true)
-            xhr.send()
-          })
-        })()
+            xhr.open('GET', 'http://54.71.133.152:3000', true);
+            xhr.send();
+          });
+        })();
 
-        console.log('await?')
-      })
-      var count = document.getElementById('count')
-      var countBtn = document.getElementById('countBtn')
+        console.log('await?');
+      });
+      var count = document.getElementById('count');
+      var countBtn = document.getElementById('countBtn');
       countBtn.addEventListener('click', function () {
-        count.innerText = parseInt(count.innerText, 10) + 1
-      })
+        count.innerText = parseInt(count.innerText, 10) + 1;
+      });
     </script>
   </body>
 </html>
