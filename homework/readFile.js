@@ -1,10 +1,10 @@
 function readFile(path, option, callback) {
   return new Promise(() => {
-    fs.readFile(path,option,callback)    
+    fs.readFile(path, option, callback);
   });
 }
-async function awaitReadFile(path, option, callback){
-  await readFile(path, option, callback)
+async function awaitReadFile(path, option, callback) {
+  await readFile(path, option, callback);
 }
 
 const fs = require('fs');
