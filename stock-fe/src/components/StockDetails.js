@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../utils/config';
 
 const StockDetails = () => {
   const [error, setError] = useState(null);
@@ -12,7 +13,7 @@ const StockDetails = () => {
 
   useEffect(() => {
     let getData = async () => {
-      let response = await axios.get(`http://localhost:3001/api/${stockId}?page=${page}`);
+      let response = await axios.get(`${API_URL}/${stockId}?page=${page}`);
       // const newData= response.data.filter((v)=>v.stock_id==stockId)
       // console.log(newData)
       setData(response.data.data);
