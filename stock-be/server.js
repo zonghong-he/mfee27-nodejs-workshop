@@ -7,13 +7,16 @@ const port = process.env.SERVER_PORT;
 const cors = require('cors');
 
 const stocksRouter = require('./rooters/stocks');
+const authRouter = require('./rooters/auth');
 app.use(cors());
+app.use(express.json());
 // app.get('/ssr', (req, res, next) => {
 //   res.render('index', {
 //     stocks: ['台積電', '長榮航', '聯發科'],
 //   });
 // });
 app.use(stocksRouter);
+app.use(authRouter);
 //設定網址變數
 
 // app.use((req, res, next) => {

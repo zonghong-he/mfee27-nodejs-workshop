@@ -47,10 +47,10 @@ const StockDetails = () => {
         >
           {i}
         </li>
-      );      
+      );
     }
     console.log(pages);
-      return pages;
+    return pages;
   };
 
   return (
@@ -58,9 +58,6 @@ const StockDetails = () => {
       {error && <div>{error}</div>}
       {<ul>{getPages()}</ul>}
       {data.map((v, i) => {
-        {
-          /* console.log(v) */
-        }
         return (
           <div key={v.date} className="bg-white bg-gray-50 p-6 rounded-lg shadow m-6">
             <h2 className="text-2xl font-bold mb-2 text-gray-800">日期：{v.date}</h2>
